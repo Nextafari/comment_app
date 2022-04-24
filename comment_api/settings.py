@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'apis.pagination.CustomPagination',
-    'PAGE_SIZE': 2,
+    'PAGE_SIZE': 10,
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
