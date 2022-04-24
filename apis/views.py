@@ -27,7 +27,7 @@ class PostComment(CreateAPIView):
         name = serializer.validated_data.get("name")
         email = serializer.validated_data.get("email")
         body = serializer.validated_data.get("body")
-        recipient = os.environ["SENDER"]
+        recipient = os.environ["RECIPIENT"]
 
         send_mail(
             f"Comment From {name} & {email} on your Page",
