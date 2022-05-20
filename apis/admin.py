@@ -26,21 +26,21 @@ class ReplyAdmin(admin.ModelAdmin):
 admin.site.register(Reply, ReplyAdmin)
 
 
-class LikeAdmin(admin.ModelAdmin):
-    list_display = (
-        'comment',
-        'like',
-    )
+# class LikeAdmin(admin.ModelAdmin):
+#     list_display = (
+#         'comment',
+#         'like',
+#     )
 
 
-admin.site.register(Like, LikeAdmin)
+# admin.site.register(Like, LikeAdmin)
 
 
-class DisLikeAdmin(admin.ModelAdmin):
-    list_display = (
-        'comment',
-        'dislike',
-    )
+# class DisLikeAdmin(admin.ModelAdmin):
+#     list_display = (
+#         'comment',
+#         'dislike',
+#     )
 
 
-admin.site.register(Dislike, DisLikeAdmin)
+# admin.site.register(Dislike, DisLikeAdmin)

@@ -81,6 +81,21 @@ class GetReply(APIView):
         )
 
 
+class CountComment(APIView):
+    """Gets replies from DB"""
+
+    def get(self, request):
+        count = Comment.objects.all().count()
+        return Response(
+            {
+                "status": "success",
+                "message": "comment counts",
+                "data": count
+            },
+            status=status.HTTP_200_OK
+        )
+
+
 class GetComment(GenericAPIView):
     """Gets comment from DB"""
     queryset = Comment.objects.all().order_by("-body")
