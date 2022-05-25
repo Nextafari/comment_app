@@ -98,7 +98,7 @@ class CountComment(APIView):
 
 class GetComment(GenericAPIView):
     """Gets comment from DB"""
-    queryset = Comment.objects.all().order_by("-body")
+    queryset = Comment.objects.all().order_by("-id")
     serializer_class = CommentSerializer
     pagination_class = CustomPagination
 
