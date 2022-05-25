@@ -73,7 +73,7 @@ class GetReply(APIView):
     serializer_class = ReplySerializer
 
     def get(self, request, pk):
-        replies = Reply.objects.filter(comment=pk)
+        replies = Reply.objects.filter(comment=pk).order_by("-id")
         serializer = GetReplySerializer(replies, many=True)
         return Response(
             serializer.data,
